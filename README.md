@@ -35,3 +35,24 @@ It supports:
 - [SeDuMi](https://sedumi.ie.lehigh.edu/) (solver for LMIs)
 
 ---
+
+## Python Reimplementation
+
+The `python/` directory contains a feature-complete translation of the MATLAB
+toolbox. It reproduces the system setup, informativity checks and controller
+synthesis using NumPy, SciPy, CVXPY and Matplotlib.
+
+### Quick start
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r python/requirements.txt
+python python/numerical_example.py
+python python/monte_carlo_analysis.py
+```
+
+The scripts mirror `Numerical_Example.m` and `Monte_Carlo_Analysis.m`, leveraging
+the reusable functions in `python/data_driven_stabilization/`.
+
+---
